@@ -7,7 +7,7 @@ home_blueprint = Blueprint('home_bp', __name__)
 
 @home_blueprint.route('/', methods=['GET'])
 def home():
-    movies_per_page = 1
+    movies_per_page = 5
 
     cursor = request.args.get('cursor')
 

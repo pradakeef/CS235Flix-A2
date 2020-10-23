@@ -5,7 +5,7 @@ from web_app.domainmodel.movie import Movie
 from web_app.domainmodel.user import User
 
 
-repo_instance = None
+repository_instance = None
 
 
 class AbstractRepository(abc.ABC):

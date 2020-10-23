@@ -4,11 +4,15 @@ from web_app.adapters.repository import AbstractRepository
 from web_app.domainmodel.user import User
 
 
-class NameNotUniqueException(Exception):
+class NameNotUniqueError(Exception):
     pass
 
 
 class UnknownUserException(Exception):
+    pass
+
+
+class UnknownUserError(Exception):
     pass
 
 
@@ -17,6 +21,9 @@ class AuthenticationException(Exception):
 
 
 class NameTakenException(Exception):
+    pass
+
+class NameNotUniqueException(Exception):
     pass
 
 
@@ -66,7 +73,7 @@ def authenticate_user(username: str, password: str, repo: AbstractRepository):
 
 def user_to_dict(user: User):
     user_dict = {
-        'username': user.__username,
-        'password': user.__password
+        'username': user.user_name,
+        'password': user.user_name
     }
     return user_dict
